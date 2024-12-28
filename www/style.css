@@ -49,3 +49,87 @@ body {
         opacity: 1;
     }
 }
+
+/* chat box effects */
+/* General styling for the container */
+.col-md-12 {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Styling for the input and buttons container */
+#textInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling for the input field */
+#chatbox {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#chatbox:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Focused shadow effect */
+}
+
+/* Glow effect for buttons */
+.glow-on-hover {
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.glow-on-hover i {
+    font-size: 18px;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
+    transform: scale(1.1);
+}
+
+/* Icon-specific button colors */
+#micbutton {
+    background-color: #28a745;
+}
+
+#chatbutton {
+    background-color: #17a2b8;
+}
+
+#settingbutton {
+    background-color: #ffc107;
+}
+
+#micbutton:hover {
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.75);
+}
+
+#chatbutton:hover {
+    box-shadow: 0 0 15px rgba(23, 162, 184, 0.75);
+}
+
+#settingbutton:hover {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.75);
+}
+
