@@ -14,7 +14,7 @@ from engine.config import ASSISTANT_NAME
 # Playing assiatnt sound function
 import pywhatkit as kit
 
-con = sqlite3.connect("jarvis.db")
+con = sqlite3.connect("tejas.db")
 cursor = con.cursor()
 
 #play music assistant
