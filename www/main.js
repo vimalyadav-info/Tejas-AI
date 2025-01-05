@@ -22,6 +22,7 @@ $(document).ready(function () {
         autostart:true
       });
 
+
       //siri message animation
       $('.siri-message').textillate({
         loop: true,
@@ -35,13 +36,27 @@ $(document).ready(function () {
         },
     })
 
+
     //micbutton click event
     $("#micbutton").click(function () { 
         eel.playAssistantSound()
         $("#oval").attr("hidden", true);
         $("#siriwave").attr("hidden", false);
         eel.allCommands()()
-        
-    });
+        });
+
+
+
+    function doc_keyUp(e) {
+        // this would test for whichever key is 40 (down arrow) and the ctrl key at the same time
+
+        if (e.key === 'j' && e.metaKey) {
+            eel.playAssistantSound()
+            $("#oval").attr("hidden",true);
+            $("#siriwave").attr("hidden",false);
+            eel.allCommands()()
+        }
+    }
+    document.addEventListener('keyup', doc_keyUp, false);
 
 });
