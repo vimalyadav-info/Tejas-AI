@@ -28,66 +28,94 @@
 <body>
 
 
-    <div class="container"></div>
+    <div class="container">
 
 
-    <section id="oval" class="mb-4">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
-                    <canvas id="canvasOne" width="700" height="420" style="position: absolute; z-index: -1;"></canvas>
-                    <div id="jarvisHood">
-                        <div class="square">
-                            <span></span> <!-- Outer Circle -->
-                            <span style="animation-duration: 8s;"></span> <!-- Slower Rotating Circle -->
-                            <span class="circle"></span>
-                            <span class="circle"></span>
-                            <span class="circle"></span>
+        <section id="oval" class="mb-4">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+                        <canvas id="canvasOne" width="700" height="420"
+                            style="position: absolute; z-index: -1;"></canvas>
+                        <div id="jarvisHood">
+                            <div class="square">
+                                <span></span> <!-- Outer Circle -->
+                                <span style="animation-duration: 8s;"></span> <!-- Slower Rotating Circle -->
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <h4 class="text-light text text-center">Hello, I am jarvis, how can I help you?</h4>
+                    <h4 class="text-light text text-center">Hello, I am jarvis, how can I help you?</h4>
 
 
-                <div class="col-md-12">
-                    <div class="text-center">
-                        <div id="textInput" class="d-flex">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <div id="textInput" class="d-flex">
 
-                            <input type="text" name="chatbox" id="chatbox" placeholder="Tyep Here..........">
-                            <button id="micbutton" class="glow-on-hover"><i class="bi bi-mic-fill"></i></button>
-                            <button id="chatbutton" class="glow-on-hover"><i class="bi bi-chat-dots-fill"></i></button>
-                            <button id="settingbutton" class="glow-on-hover"><i class="bi bi-gear-fill"></i></button>
+
+                                <input type="text" class="inpu-field" name="chatbox" id="chatbox"
+                                    placeholder="Tyep Here..........">
+
+                                <button id="sendbutton" class="glow-on-hover" hidden><i class="bi bi-send"></i></button>
+
+                                <button id="micbutton" class="glow-on-hover"><i class="bi bi-mic-fill"></i></button>
+
+                                <button id="chatbutton" class="glow-on-hover" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                    <i class="bi bi-chat-dots-fill"></i></button>
+
+                                <button id="settingbutton" class="glow-on-hover"><i
+                                        class="bi bi-gear-fill"></i></button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <div class="col-md-1"></div>
             </div>
-            <div class="col-md-1"></div>
+
+        </section>
+        <section id="siriwave" class="mb-4" hidden>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div
+                            style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+                            <div style="width: 300px; height: 300px; border: 2px solid black; border-radius: 50%;">
+                            </div>
+                            <div>
+                                <p class="text-start text-light mb-4 siri-message">
+                                    Hello==>>>I am Jarvis..
+                                </p>
+                                <div id="siri-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!--offcanva-->
+    <div class="offcanvas offcanvas-start chat-canvas" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+
+            <h5 class="offcanvas-title text-white" id="offcanvasScrollingLabel">Chat History</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-
-    </section>
-    <section id="siriwave" class="mb-4" hidden>
-
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
-                    <div style="width: 300px; height: 300px; border: 2px solid black; border-radius: 50%;"></div>
-                    <div>
-                        <p class="text-start text-light mb-4 siri-message">
-                            Hello==>>>I am Jarvis..
-                        </p>
-                        <div id="siri-container"></div>
-                    </div>
-                </div>
-            </div>
+        <div id="chat-canvas-body" class="offcanvas-body">
+            <!--chating here-->
         </div>
     </div>
-     <!-- Main Container to Center Content -->
-     
 
-    </section>
+
     <!--Jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -121,3 +149,7 @@
 </body>
 
 </html>
+
+
+
+

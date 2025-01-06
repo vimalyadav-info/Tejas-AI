@@ -76,7 +76,11 @@ body {
 
 #chatbox::placeholder {
     color: #888888;
-    box-shadow: 0 0 10px #29251e, 0 0 20px #b5cbf3, 0 0 30px #ca8806
+    box-shadow: 0 0 10px #02ef49, 0 0 20px #0257f5, 0 0 30px #f3a303
+}
+#chatbox:hover {
+    color: #888888;
+    box-shadow: 0 0 10px #f5f5f4, 0 0 20px #e9eaeb, 0 0 30px #f7f7f8
 }
 
 /* Buttons */
@@ -98,6 +102,9 @@ button:hover {
 }
 
 /* Specific Button Colors */
+#sendbutton:hover {
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+}
 #micbutton:hover {
     box-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
 }
@@ -118,7 +125,7 @@ button:hover {
 
     #textInput {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
 
     button {
@@ -127,5 +134,34 @@ button:hover {
     }
 
 }
+/*input filled end*/
 
+/*chatv=box start*/
+.chat-canvas{
+    background-color: #191919;
+}
 
+.receiver_message{
+    padding: 8px;
+    border: 2px solid cyan;
+    border-radius: 0px 15px 0px 20px;
+    width: auto;
+    color: white;
+    background-color: #0dcaf014;
+
+}
+
+.sender_message{
+    padding: 8px;
+    border: 2px solid burlywood;
+    border-radius: 0px 15px 0px 20px;
+    width: auto;
+    color: white;
+    background-color: grey;
+
+}
+.width-size{
+    max-width: 80%;
+    width: auto;
+}
+/*chatbox end*/
