@@ -5,7 +5,7 @@ $(document).ready(function () {
         in: {
             effect: "bounceIn",
         },
-        out:{
+        out: {
             effect: "bounceOut",
         },
     })
@@ -19,31 +19,31 @@ $(document).ready(function () {
         style: "ios9",
         amplitude: "1",
         speed: "0.30",
-        autostart:true
-      });
+        autostart: true
+    });
 
 
-      //siri message animation
-      $('.siri-message').textillate({
+    //siri message animation
+    $('.siri-message').textillate({
         loop: true,
         sync: true,
         in: {
             effect: "fadeInUp",
             sync: true
         },
-        out:{
+        out: {
             effect: "fadeOutUo",
         },
     })
 
 
     //micbutton click event
-    $("#micbutton").click(function () { 
+    $("#micbutton").click(function () {
         eel.playAssistantSound()
         $("#oval").attr("hidden", true);
         $("#siriwave").attr("hidden", false);
         eel.allCommands()()
-        });
+    });
 
 
 
@@ -52,11 +52,72 @@ $(document).ready(function () {
 
         if (e.key === 'j' && e.metaKey) {
             eel.playAssistantSound()
-            $("#oval").attr("hidden",true);
-            $("#siriwave").attr("hidden",false);
+            $("#oval").attr("hidden", true);
+            $("#siriwave").attr("hidden", false);
             eel.allCommands()()
         }
     }
     document.addEventListener('keyup', doc_keyUp, false);
+
+
+
+    // to play assisatnt 
+    
+    
+    function PlayAssistant(message) {
+
+        if (message != "") {
+
+            $("#oval").attr("hidden", true);
+            $("#siriWave").attr("hidden", false);
+            eel.allCommands(message);
+            $("#chatbox").val("")
+            $("#micbutton").attr('hidden', false);
+            $("#sendbutton").attr('hidden', true);
+
+        }
+
+    }
+
+    // toogle fucntion to hide and display mic and send button 
+    function ShowHideButton(message) {
+        if (message.length == 0) {
+            $("#micbutton").attr('hidden', false);
+            $("#sendbutton").attr('hidden', true);
+        }
+        else {
+            $("#micbutton").attr('hidden', true);
+            $("#sendbutton").attr('hidden', false);
+        }
+    }
+
+    // key up event handler on text box
+    $("#chatbox").keyup(function () {
+
+        let message = $("#chatbox").val();
+        ShowHideButton(message)
+
+    });
+
+    // send button event handler
+    $("#sendbutton").click(function () {
+
+        let message = $("#chatbox").val()
+        PlayAssistant(message)
+
+    });
+
+
+    // enter press event handler on chat box
+    $("#chatbox").keypress(function (e) {
+        key = e.which;
+        if (key == 13) {
+            let message = $("#chatbox").val()
+            PlayAssistant(message)
+        }
+    });
+
+
+
 
 });
