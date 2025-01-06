@@ -50,13 +50,13 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS contacts(id integer primary key, na
         # con.close()
 
 
-        # query = "INSERT INTO contacts VALUES (null,'vimal','8868048574','null')"
-        # cursor.execute(query)
-        # con.commit()
+query = "INSERT INTO contacts VALUES (null,'priyanshu gangwar','+91 80064 30906','null')"
+cursor.execute(query)
+con.commit()
 
-query = 'vimal'
-query = query.strip().lower()
+                # query = 'vimal'
+                # query = query.strip().lower()
 
-cursor.execute("SELECT mobile_no FROM contacts WHERE LOWER(name) LIKE ? OR LOWER(name) LIKE ?", ('%' + query + '%', query + '%'))
-results = cursor.fetchall()
-print(results[0][0])
+                # cursor.execute("SELECT mobile_no FROM contacts WHERE LOWER(name) LIKE ? OR LOWER(name) LIKE ?", ('%' + query + '%', query + '%'))
+                # results = cursor.fetchall()
+                # print(results[0][0])
