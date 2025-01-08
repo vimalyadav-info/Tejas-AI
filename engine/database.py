@@ -5,7 +5,7 @@ con = sqlite3.connect("tejas.db")
 cursor = con.cursor()
 
 
-#application commands
+#===>> application commands
 query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary key, name VARCHAR(100),path VARCHAR(1000))"
 cursor.execute(query)
 
@@ -19,20 +19,23 @@ cursor.execute(query)
 
 
 
-# #web commands
+#===>> #web commands
 
-# query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100),url VARCHAR(1000))"
-# cursor.execute(query)
+query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100),url VARCHAR(1000))"
+cursor.execute(query)
 
 
-# query = "INSERT INTO web_command VALUES (null,'youtube','https://www.youtube.com/')"
-# cursor.execute(query)
-# con.commit()
+
+
+query = "INSERT INTO web_command VALUES (null,'copilot','https://copilot.microsoft.com/')"
+cursor.execute(query)
+con.commit()
 
 
 #create a table with the desired columns
 cursor.execute('''CREATE TABLE IF NOT EXISTS contacts(id integer primary key, name VARCHAR(200),mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
 
+#===>> csv file add code
 
         # # Specify the column indices you want to import (0-based index)
         # # Example: Importing the 1st and 3rd columns
@@ -50,9 +53,9 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS contacts(id integer primary key, na
         # con.close()
 
 
-query = "INSERT INTO contacts VALUES (null,'priyanshu gangwar','+91 80064 30906','null')"
-cursor.execute(query)
-con.commit()
+# query = "INSERT INTO contacts VALUES (null,'priyanshu gangwar','+91 80064 30906','null')"
+# cursor.execute(query)
+# con.commit()
 
                 # query = 'vimal'
                 # query = query.strip().lower()
@@ -60,3 +63,21 @@ con.commit()
                 # cursor.execute("SELECT mobile_no FROM contacts WHERE LOWER(name) LIKE ? OR LOWER(name) LIKE ?", ('%' + query + '%', query + '%'))
                 # results = cursor.fetchall()
                 # print(results[0][0])
+
+        # query = "INSERT INTO contacts VALUES (null,'vivek sir BCB ','+91 95289 04255','null')"
+        # cursor.execute(query)
+        # con.commit()
+
+        # query = "INSERT INTO contacts VALUES (null,'prakhar yadav ','+91 84458 07232','null')"
+        # cursor.execute(query)
+        # con.commit()
+
+        # query = "INSERT INTO contacts VALUES (null,' HOD roma saxena ','+91 75990 61799','null')"
+        # cursor.execute(query)
+        # con.commit()
+
+        # query = "INSERT INTO contacts VALUES (null,'amit sharma sir BCB','+91 94108 25849','null')"
+        # cursor.execute(query)
+        # con.commit()
+
+
