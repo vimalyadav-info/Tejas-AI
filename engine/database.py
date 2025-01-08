@@ -53,7 +53,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS contacts(id integer primary key, na
         # con.close()
 
 
-# query = "INSERT INTO contacts VALUES (null,'priyanshu gangwar','+91 80064 30906','null')"
+# query = "INSERT INTO contacts VALUES (null,'priyanshu gangwar','+91 0000000000','null')"
 # cursor.execute(query)
 # con.commit()
 
@@ -64,19 +64,19 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS contacts(id integer primary key, na
                 # results = cursor.fetchall()
                 # print(results[0][0])
 
-        # query = "INSERT INTO contacts VALUES (null,'vivek sir BCB ','+91 95289 04255','null')"
+        # query = "INSERT INTO contacts VALUES (null,'vivek sir BCB ','+91 0000000000','null')"
         # cursor.execute(query)
         # con.commit()
 
-        # query = "INSERT INTO contacts VALUES (null,'prakhar yadav ','+91 84458 07232','null')"
+        # query = "INSERT INTO contacts VALUES (null,'prakhar yadav ','+91 0000000000','null')"
         # cursor.execute(query)
         # con.commit()
 
-        # query = "INSERT INTO contacts VALUES (null,' HOD roma saxena ','+91 75990 61799','null')"
+        # query = "INSERT INTO contacts VALUES (null,' HOD roma saxena ','+91 0000000000','null')"
         # cursor.execute(query)
         # con.commit()
 
-        # query = "INSERT INTO contacts VALUES (null,'amit sharma sir BCB','+91 94108 25849','null')"
+        # query = "INSERT INTO contacts VALUES (null,'amit sharma sir BCB','+91 0000000000','null')"
         # cursor.execute(query)
         # con.commit()
 
