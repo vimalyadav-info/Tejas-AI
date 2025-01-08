@@ -181,5 +181,8 @@ def chatBot(query):
     chatbot = hugchat.ChatBot(cookie_path="engine\cookies.json")
     id = chatbot.new_conversation()
     chatbot.change_conversation(id)
-    response = chatbot.chat(user_input)
+    response =  chatbot.chat(user_input)
+    print(response)
+    speak(response)
     return response
+
