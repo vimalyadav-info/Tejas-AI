@@ -1,5 +1,12 @@
+# Ignore the environment configuration file
 /envjarvis
+
+# Ignore specific files
 contacts.csv
 tejas.db
-/engine/__pycache__
+
+# Ignore the __pycache__ directory
+/engine/__pycache__/
+
+# Ignore cookies.json
 /engine/cookies.json
