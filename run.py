@@ -1,8 +1,8 @@
-    # To run Jarvis
+    # To run anugat
 import multiprocessing
 
 
-def startJarvis():
+def startanugat():
         # Code for process 1
         print("Process 1 is running.")
         from main import start
@@ -18,7 +18,7 @@ def listenHotword():
 
         # Start both processes
 if __name__ == '__main__':
-        p1 = multiprocessing.Process(target=startJarvis)
+        p1 = multiprocessing.Process(target=startanugat)
         p2 = multiprocessing.Process(target=listenHotword)
         p1.start()
         p2.start()

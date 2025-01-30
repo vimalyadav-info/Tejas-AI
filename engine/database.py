@@ -1,7 +1,7 @@
 import csv
 import sqlite3
 
-con = sqlite3.connect("tejas.db")
+con = sqlite3.connect("anugat.db")
 cursor = con.cursor()
 
 

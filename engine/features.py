@@ -19,13 +19,13 @@ import pvporcupine
 
 from engine.helper import extract_yt_term, remove_words
 
-con = sqlite3.connect("tejas.db")
+con = sqlite3.connect("anugat.db")
 cursor = con.cursor()
 
 #play music assistant
 @eel.expose
 def playAssistantSound():
-    music_dir="www\\assets\\audio\\tejasaudio.mp3"
+    music_dir="www\\assets\\audio\\anugatactve.mp3"
     playsound(music_dir)
     
 def openCommand(query):
@@ -78,7 +78,7 @@ def hotword():
     try:
        
         # pre trained keywords    
-        porcupine=pvporcupine.create(keywords=["jarvis","alexa"]) 
+        porcupine=pvporcupine.create(keywords=["jarvis","alexa","anugat"]) 
         paud=pyaudio.PyAudio()
         audio_stream=paud.open(rate=porcupine.sample_rate,channels=1,format=pyaudio.paInt16,input=True,frames_per_buffer=porcupine.frame_length)
         
@@ -97,7 +97,7 @@ def hotword():
                 # pressing shorcut key win+j
                 import pyautogui as autogui
                 autogui.keyDown("win")
-                autogui.press("j")
+                autogui.press("a")
                 time.sleep(2)
                 autogui.keyUp("win")
                 
@@ -139,17 +139,17 @@ def whatsApp(mobile_no, message, flag, name):
 
     if flag == 'message':
         target_tab = 13
-        jarvis_message = "message send successfully to "+name
+        anugat_message = "message send successfully to "+name
 
     elif flag == 'call':
         target_tab = 8
         message = ''
-        jarvis_message = "calling to "+name
+        anugat_message = "calling to "+name
 
     else:
         target_tab = 7
         message = ''
-        jarvis_message = "staring video call with "+name
+        anugat_message = "staring video call with "+name
 
     # Encode the message for URL
     encoded_message = quote(message)
@@ -171,5 +171,5 @@ def whatsApp(mobile_no, message, flag, name):
         pyautogui.hotkey('tab')
 
     pyautogui.hotkey('enter')
-    speak(jarvis_message)
+    speak(anugat_message)
 

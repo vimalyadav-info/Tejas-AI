@@ -65,15 +65,15 @@ def allCommands(message=1):
             from engine.features import openCommand
             openCommand(query)
 
-        elif "hello jarvis" in query:
+        elif "hello anugat" in query:
             speak("hello sir, Welcome , How can I help you.")
 
-        elif "jarvis say time" in query:
+        elif "anugat say time" in query:
             now_time = datetime.datetime.now().strftime("%H:%M")
             print("Current time is " + str(now_time))
             speak("Current time is " + str(now_time))
 
-        elif "jarvis say date" in query:
+        elif "anugat say date" in query:
             now_time = datetime.datetime.now().strftime("%d:%m")
             print("Current time is " + str(now_time))
             speak("Current date is " + str(now_time))    
@@ -86,7 +86,7 @@ def allCommands(message=1):
                     
 
         elif "windows" in query:
-                    query = query.replace("open", "").strip().lower()
+                    query = query.replace("windows", "").strip().lower()
                     print(f"Query: {query}")
                     speak(f"You asked to open: {query}")
 
