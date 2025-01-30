@@ -25,7 +25,7 @@ cursor = con.cursor()
 #play music assistant
 @eel.expose
 def playAssistantSound():
-    music_dir="www\\assets\\audio\\anugatactve.mp3"
+    music_dir="www/assets/audio/anugatactive.mp3"
     playsound(music_dir)
     
 def openCommand(query):
