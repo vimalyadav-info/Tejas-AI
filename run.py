@@ -1,8 +1,8 @@
-    # To run anugat
+    # To run sathi
 import multiprocessing
 
 
-def startanugat():
+def startsathi():
         # Code for process 1
         print("Process 1 is running.")
         from main import start
@@ -18,7 +18,7 @@ def listenHotword():
 
         # Start both processes
 if __name__ == '__main__':
-        p1 = multiprocessing.Process(target=startanugat)
+        p1 = multiprocessing.Process(target=startsathi)
         p2 = multiprocessing.Process(target=listenHotword)
         p1.start()
         p2.start()

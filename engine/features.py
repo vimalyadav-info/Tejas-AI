@@ -19,13 +19,13 @@ import pvporcupine
 
 from engine.helper import extract_yt_term, remove_words
 
-con = sqlite3.connect("anugat.db")
+con = sqlite3.connect("sathi.db")
 cursor = con.cursor()
 
 #play music assistant
 @eel.expose
 def playAssistantSound():
-    music_dir="www/assets/audio/anugatactive.mp3"
+    music_dir="www/assets/audio/sathiactive.mp3"
     playsound(music_dir)
     
 def openCommand(query):
@@ -78,7 +78,7 @@ def hotword():
     try:
        
         # pre trained keywords    
-        porcupine=pvporcupine.create(keywords=["jarvis","alexa","anugat"]) 
+        porcupine=pvporcupine.create(keywords=["jarvis","alexa","sathi"]) 
         paud=pyaudio.PyAudio()
         audio_stream=paud.open(rate=porcupine.sample_rate,channels=1,format=pyaudio.paInt16,input=True,frames_per_buffer=porcupine.frame_length)
         
@@ -139,17 +139,17 @@ def whatsApp(mobile_no, message, flag, name):
 
     if flag == 'message':
         target_tab = 13
-        anugat_message = "message send successfully to "+name
+        sathi_message = "message send successfully to "+name
 
     elif flag == 'call':
         target_tab = 8
         message = ''
-        anugat_message = "calling to "+name
+        sathi_message = "calling to "+name
 
     else:
         target_tab = 7
         message = ''
-        anugat_message = "staring video call with "+name
+        sathi_message = "staring video call with "+name
 
     # Encode the message for URL
     encoded_message = quote(message)
@@ -171,5 +171,5 @@ def whatsApp(mobile_no, message, flag, name):
         pyautogui.hotkey('tab')
 
     pyautogui.hotkey('enter')
-    speak(anugat_message)
+    speak(sathi_message)
 

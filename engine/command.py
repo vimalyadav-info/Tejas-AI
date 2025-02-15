@@ -7,9 +7,8 @@ import pyttsx3
 import speech_recognition as sr
 import eel
 import time
-import wikipidea
 
-
+import wikipedia
 def speak(text): 
 
     engine = pyttsx3.init()
@@ -60,31 +59,31 @@ def allCommands(message=1):
 
     try:   
    
-        if "open"in query:
+        if " open"in query:
             from engine.features import openCommand
             openCommand(query)
 
-        elif "hello anugat" in query:
+        elif " hello sathi" in query:
             speak("hello sir, Welcome , How can I help you.")
 
-        elif "anugat say time" in query:
+        elif " sathi say time" in query:
             now_time = datetime.datetime.now().strftime("%H:%M")
             print("Current time is " + str(now_time))
             speak("Current time is " + str(now_time))
 
-        elif "anugat say date" in query:
+        elif " sathi say date" in query:
             now_time = datetime.datetime.now().strftime("%d:%m")
             print("Current time is " + str(now_time))
             speak("Current date is " + str(now_time))    
         
         
-        elif "on youtube" in query:
+        elif " on youtube" in query:
                     from engine.features import PlayYoutube
                     PlayYoutube(query)
 
                     
 
-        elif "windows" in query:
+        elif " windows" in query:
                     query = query.replace("windows", "").strip().lower()
                     print(f"Query: {query}")
                     speak(f"You asked to open: {query}")

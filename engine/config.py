@@ -1,1 +1,1 @@
-ASSISTANT_NAME = "anugat"
+ASSISTANT_NAME = "sathi"
